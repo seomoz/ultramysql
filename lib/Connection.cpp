@@ -283,6 +283,7 @@ bool Connection::processHandshake()
     }
 
     m_clientCaps = serverCaps;
+    m_clientCaps |= MCP_MULTI_RESULTS;
 
     m_clientCaps  &= ~MCP_COMPRESS;
     m_clientCaps  &= ~MCP_NO_SCHEMA;
